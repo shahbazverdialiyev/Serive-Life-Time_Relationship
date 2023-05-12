@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XC/g9We6teXFyOCmIjMYiDVmwN0uQyyCPEdafzRsd9weX7t3EDfZPnSeXAWwfKUHRwBY5Q1tazLNE0yIQeDLZw==",
+  "dgSpecHash": "m1hZi/F0kzFOjKgKy45kIntfMS6ksO71ppxJn/3hHRC4m+0o0qh2jaapp58q2RJKHzo3dfS7c3uKqi3JWKwMbQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ClassTime\\source\\repos\\sh\\Fiorello\\Fiorello.csproj",
+  "projectFilePath": "C:\\Users\\ClassTime\\Desktop\\Fiorello\\Fiorello.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ClassTime\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ClassTime\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
@@ -38,6 +38,7 @@
     "C:\\Users\\ClassTime\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.16\\microsoft.entityframeworkcore.design.6.0.16.nupkg.sha512",
     "C:\\Users\\ClassTime\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.16\\microsoft.entityframeworkcore.relational.6.0.16.nupkg.sha512",
     "C:\\Users\\ClassTime\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.16\\microsoft.entityframeworkcore.sqlserver.6.0.16.nupkg.sha512",
+    "C:\\Users\\ClassTime\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.16\\microsoft.entityframeworkcore.tools.6.0.16.nupkg.sha512",
     "C:\\Users\\ClassTime\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\ClassTime\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "C:\\Users\\ClassTime\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

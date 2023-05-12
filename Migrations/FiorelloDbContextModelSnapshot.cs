@@ -53,6 +53,32 @@ namespace Fiorello.Migrations
                     b.ToTable("catagories");
                 });
 
+            modelBuilder.Entity("Fiorello.Models.Image", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Alt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("isMain")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("images");
+                });
+
             modelBuilder.Entity("Fiorello.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -75,6 +101,27 @@ namespace Fiorello.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("products");
+                });
+
+            modelBuilder.Entity("Fiorello.Models.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("settings");
                 });
 
             modelBuilder.Entity("Fiorello.Models.Tag", b =>
@@ -124,6 +171,17 @@ namespace Fiorello.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Fiorello.Models.Image", b =>
+                {
+                    b.HasOne("Fiorello.Models.Product", "Product")
+                        .WithMany("Images")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("ProductTag", b =>
                 {
                     b.HasOne("Fiorello.Models.Product", null)
@@ -137,6 +195,11 @@ namespace Fiorello.Migrations
                         .HasForeignKey("TagsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Fiorello.Models.Product", b =>
+                {
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }
